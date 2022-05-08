@@ -1,0 +1,1 @@
+Update PS_GameData.dbo.Chars Set LoginStatus = 0

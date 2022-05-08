@@ -1,0 +1,1 @@
+UPDATE PS_GameData.dbo.CharItems Set ItemID = 25065 WHERE ItemID = 44099
