@@ -1,0 +1,33 @@
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(applied)
+label(exit)
+
+newmem:
+cmp byte ptr [edi+58bc],0
+jne applied
+//Colocar em Hex//
+originalcode:
+add eax,05 // Normale Kills
+mov [esi],eax
+jmp returnhere
+
+applied:
+add eax,A // Kills lors de l'utilisation de la Rune
+mov [esi],eax
+
+exit:
+jmp returnhere
+
+"ps_game.exe"+5AF71:
+jmp newmem
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+"ps_game.exe"+5AF71:
+add eax,01
+mov [esi],eax

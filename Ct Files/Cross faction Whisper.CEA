@@ -1,0 +1,55 @@
+// Cross Faction Whisper//
+[ENABLE]
+
+004706F1:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+
+00471111:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+
+004706F1:
+mov dl,[eax+0000012D]
+cmp dl,[ebx+0000012D]
+jne 004707FE
+
+00471111:
+mov dl,[eax+0000012D]
+cmp dl,[ebx+0000012D]
+jne 0047121E

@@ -1,0 +1,27 @@
+// Cross faction trade//
+[ENABLE]
+
+00420E44:
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+nop
+
+[DISABLE]
+
+00420E44:
+mov dl,[esp+14]
+cmp dl,[ecx+0000012D]
+jne 00420EDE

@@ -1,0 +1,21 @@
+// Cross Faction Inspect function in AH//
+[ENABLE]
+alloc(newmem,2048)
+label(returnhere)
+
+newmem:
+cmp word ptr [edi+164],2A
+je 00469F82
+mov dl,[edi+0000012D]
+jmp returnhere
+
+00469F70:
+jmp newmem
+nop
+returnhere:
+
+[DISABLE]
+dealloc(newmem)
+
+00469F70:
+mov dl,[edi+0000012D]
